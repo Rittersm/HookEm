@@ -22,6 +22,7 @@ gem 'rack-cors'
 
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'figaro'
+gem 'faker'
 gem "rack-protection", :github => "sinatra/rack-protection"
 gem 'refile', github: 'refile/refile', require: 'refile/rails'
 gem 'refile-mini_magick', github: 'refile/refile-mini_magick'
