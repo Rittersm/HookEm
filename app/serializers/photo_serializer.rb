@@ -1,4 +1,4 @@
-class PostSerializer < ActiveModel::Serializer
+class PhotoSerializer < ActiveModel::Serializer
   attributes :id, :caption, :created_at
   has_one :photo
 

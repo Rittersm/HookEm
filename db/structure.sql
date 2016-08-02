@@ -46,10 +46,10 @@ CREATE TABLE ar_internal_metadata (
 
 
 --
--- Name: posts; Type: TABLE; Schema: public; Owner: -
+-- Name: photos; Type: TABLE; Schema: public; Owner: -
 --
 
-CREATE TABLE posts (
+CREATE TABLE photos (
     id integer NOT NULL,
     caption character varying,
     created_at timestamp without time zone NOT NULL,
@@ -59,10 +59,10 @@ CREATE TABLE posts (
 
 
 --
--- Name: posts_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+-- Name: photos_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
-CREATE SEQUENCE posts_id_seq
+CREATE SEQUENCE photos_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE
@@ -71,10 +71,10 @@ CREATE SEQUENCE posts_id_seq
 
 
 --
--- Name: posts_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+-- Name: photos_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
-ALTER SEQUENCE posts_id_seq OWNED BY posts.id;
+ALTER SEQUENCE photos_id_seq OWNED BY photos.id;
 
 
 --
@@ -121,7 +121,7 @@ CREATE TABLE schema_migrations (
 -- Name: id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY posts ALTER COLUMN id SET DEFAULT nextval('posts_id_seq'::regclass);
+ALTER TABLE ONLY photos ALTER COLUMN id SET DEFAULT nextval('photos_id_seq'::regclass);
 
 
 --
@@ -140,11 +140,11 @@ ALTER TABLE ONLY ar_internal_metadata
 
 
 --
--- Name: posts_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: photos_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY posts
-    ADD CONSTRAINT posts_pkey PRIMARY KEY (id);
+ALTER TABLE ONLY photos
+    ADD CONSTRAINT photos_pkey PRIMARY KEY (id);
 
 
 --
@@ -183,6 +183,6 @@ CREATE INDEX index_refile_attachments_on_oid ON refile_attachments USING btree (
 
 SET search_path TO "$user", public;
 
-INSERT INTO schema_migrations (version) VALUES ('20160802172752'), ('20160802172942'), ('20160802173205');
+INSERT INTO schema_migrations (version) VALUES ('20160802172752'), ('20160802172942'), ('20160802173205'), ('20160802201735');
 
 
