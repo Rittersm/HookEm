@@ -1,5 +1,5 @@
 class PhotoSerializer < ActiveModel::Serializer
-  attributes :id, :caption, :created_at
+  attributes :id, :caption, :created_at, :from_email
   has_one :photo
 
   def created_at

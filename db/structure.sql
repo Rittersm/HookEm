@@ -54,7 +54,8 @@ CREATE TABLE photos (
     caption character varying,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
-    photo_id character varying
+    photo_id character varying,
+    from_email character varying
 );
 
 
@@ -183,6 +184,6 @@ CREATE INDEX index_refile_attachments_on_oid ON refile_attachments USING btree (
 
 SET search_path TO "$user", public;
 
-INSERT INTO schema_migrations (version) VALUES ('20160802172752'), ('20160802172942'), ('20160802173205'), ('20160802201735');
+INSERT INTO schema_migrations (version) VALUES ('20160802172752'), ('20160802172942'), ('20160802173205'), ('20160802201735'), ('20160803013804');
 
 

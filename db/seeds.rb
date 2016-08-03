@@ -10,6 +10,7 @@
   photo = Photo.create!(
     caption: Faker::Superhero.name,
     remote_photo_url: "https://unsplash.it/400/300?image=#{rand(1018)}",
+    from_email: Faker::Internet.safe_email,
     created_at: Faker::Time.between(6.months.ago, Date.today, :all)
   )
 end
